@@ -6,11 +6,21 @@
     */
 
     //Entrada
-
+    const palavra = prompt(`Informe uma palavra.`).trim().toUpperCase();
+    let vogais = 0;
+    let consoantes = 0;
 
     //Processamento
-
+    Array.from(palavra);
+    for (let letra of palavra) {
+        if (letra === "A" || letra === "E" ||letra === "I" || letra === "O" || letra === "U") {
+            vogais ++
+        }
+        else {
+            consoantes ++
+        }
+    }
 
     //Saída
-
+    document.write(`A quantidade de consoantes é ${consoantes}. A quantidade de vogais é ${vogais}.`);
 </script>

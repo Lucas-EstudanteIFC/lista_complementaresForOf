@@ -7,11 +7,20 @@
     */
 
     //Entrada
-
-
+    const notasAluno = [7, 5, 9, 8];
+    let notaMaior = []
+    let notaMenor = []
     //Processamento
-
-
+    
+    for (let nota of notasAluno) {
+        if (nota > 8) {
+            notaMaior.push(nota);
+        }
+        else if (nota < 6) {
+            notaMenor.push(nota);
+        }
+    }
+    let media = notasAluno.reduce((acumulador, elemento) => acumulador + elemento, 0) / notasAluno.length;
     //Saída
-
+    document.write(`A maior nota foi ${notaMaior}, a menor foi ${notaMenor} e a média foi ${media}.`);
 </script>
