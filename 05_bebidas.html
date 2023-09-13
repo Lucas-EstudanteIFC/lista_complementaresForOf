@@ -7,11 +7,16 @@
     */
 
     //Entrada
-
-
-    //Processamento
-
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
+    let bebidasParaMenores = [];
+    //Processamento 
+    for (let drinks of bebidas) {
+        const alcool = prompt(`Essa bebida possui álcool? S ou N`).trim().toUpperCase();
+        if (alcool == "N") {
+            bebidasParaMenores.push(drinks);
+        };
+    }
 
     //Saída
-
+    document.write(`As bebidas permitidas são ${bebidasParaMenores.join(", ")}.`);
 </script>

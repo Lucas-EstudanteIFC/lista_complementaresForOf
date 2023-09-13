@@ -8,11 +8,17 @@
     */
 
     //Entrada
-
-
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+    
     //Processamento
-
+    let coresFavorita = []
+    const pergunta = prompt(`Qual é a cor sua favorita? Branco, Azul, Marrom, Cinza, Verde, Amarelo, Vermelho, Preto;`);
+    for (let cor of cores) {
+        if (cor == pergunta) {
+            coresFavorita.push(cor)
+        }
+    }
 
     //Saída
-
+    document.write(`Sua cor favorita é ${coresFavorita}.`)
 </script>

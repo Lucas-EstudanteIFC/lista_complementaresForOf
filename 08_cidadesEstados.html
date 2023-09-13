@@ -8,11 +8,47 @@
     */
 
     //Entrada
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
 
     //Processamento
-
-
+    let SC = [];
+    let RS = [];
+    let PR = [];
+    for (const municipio of cidades) {
+        const pergunta = prompt(`A qual estado esta cidade pertence: PR, RS ou SC \n ${municipio}?`).toUpperCase().trim();
+        if (pergunta == "SC") {
+            SC.push(municipio);
+        }
+        else if (pergunta == "PR") {
+            PR.push(municipio);
+        }
+        else if (pergunta == "RS"){
+            RS.push(municipio);
+        }
+        else{
+            document.write(`Valor invalido!`);
+        }
+    }
+    let contagemPR = PR.length;
+    let contagemRS = RS.length;
+    let contagemSC = SC.length;
     //Saída
-
+    if (contagemPR > contagemRS && contagemRS > contagemSC) {
+        document.write(`As cidades pertencendo ao Paraná são: ${PR.join(", ")}. <br> As cidades pertencendo ao Rio Grande do Sul são: ${RS.join(", ")}. <br> As cidades pertencendo a Santa Catarina são: ${SC.join(", ")}.`);
+    }
+    else if (contagemPR > contagemSC && contagemSC > contagemRS) {
+        document.write(`As cidades pertencendo ao Paraná são: ${PR.join(", ")}. <br> As cidades pertencendo a Santa Catarina são: ${SC.join(", ")}. <br> As cidades pertencendo ao Rio Grande do Sul são: ${RS.join(", ")}.`);
+    }
+    else if (contagemRS > contagemPR && contagemPR > contagemSC) {
+        document.write(`As cidades pertencendo ao Rio Grande do Sul são: ${RS.join(", ")}. <br> As cidades pertencendo ao Paraná são: ${PR.join(", ")}. <br> As cidades pertencendo a Santa Catarina são: ${SC.join(", ")}.`);
+    }
+    else if (contagemRS > contagemSC && contagemSC > contagemPR) {
+        document.write(`As cidades pertencendo ao Rio Grande do Sul são: ${RS.join(", ")}. <br> As cidades pertencendo a Santa Catarina são: ${SC.join(", ")}. <br> As cidades pertencendo ao Paraná são: ${PR.join(", ")}.`);
+    }
+    else if (contagemSC > contagemPR && contagemPR > contagemRS) {
+        document.write(`As cidades pertencendo a Santa Catarina são: ${SC.join(", ")}. <br> As cidades pertencendo ao Paraná são: ${PR.join(", ")}. <br> As cidades pertencendo ao Rio Grande do Sul são: ${RS.join(", ")}.`);
+    }
+    else {
+        document.write(`As cidades pertencendo a Santa Catarina são: ${SC.join(", ")}. <br> As cidades pertencendo ao Rio Grande do Sul são: ${RS.join(", ")}. <br> As cidades pertencendo ao Paraná são: ${PR.join(", ")}.`);
+    }
 </script>

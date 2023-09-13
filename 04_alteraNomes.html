@@ -9,12 +9,13 @@
 
     //Entrada
     let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
-    let nomeCorrigida = []
+    
     //Processamento
+    let nomeCorrigida = []
     for (let nome of nomes) {
-        nomeCorrigida.push(nome)
+        nomeCorrigida.push(nome.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u"));
     }
 
     //Saída
-    document.write(`A lista corrigidas de nomes é: ${nomeCorrigida}.`);
+    document.write(`A lista corrigidas de nomes é: ${nomeCorrigida.join(", ")}.`);
 </script>

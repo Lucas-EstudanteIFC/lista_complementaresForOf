@@ -7,11 +7,15 @@
     */
 
     //Entrada
-
-
+    let lista = ["A", "E", 2, 4.8, "CINQUENTA", "Araquari", 80, 10, 3.2];
+    let listaNumeros = [];
     //Processamento
-
-
+    for (let num of lista) {
+        if (!isNaN(num)) {
+            numeros.push(num);
+        }
+    }
+    let resultado = listaNumeros.reduce((acumulador, elemento) => acumulador + elemento, 0);
     //Saída
-
+    document.write(`O resultado é ${resultado}.`);
 </script>
